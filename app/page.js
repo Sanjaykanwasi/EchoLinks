@@ -267,7 +267,8 @@ export default function Home() {
           </h2>
           <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
             Join thousands of users who trust EchoLinks for their URL shortening
-            needs. Start shortening your links today - it's completely free!
+            needs. Start shortening your links today - it&apos;s completely
+            free!
           </p>
           <Link href="/shorten" className="inline-block">
             <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-200 transform hover:-translate-y-1">
