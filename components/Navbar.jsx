@@ -74,18 +74,15 @@ export default function Navbar() {
                   Try Now
                 </button>
               </Link>
-              <Link href="/github">
-                <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-200 transform hover:-translate-y-0.5 cursor-pointer">
-                  Github
-                </button>
-              </Link>
             </div>
 
             {/* Mobile menu button */}
             <div className="md:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className={`p-2 rounded-lg ${isScrolled ? 'text-gray-200' : 'text-gray-200'} hover:text-purple-400 hover:bg-gray-50/10 transition-colors duration-200`}
+                className={`p-2 rounded-lg ${
+                  isScrolled ? "text-gray-200" : "text-gray-200"
+                } hover:text-purple-400 hover:bg-gray-50/10 transition-colors duration-200`}
               >
                 {isOpen ? (
                   <X className="w-6 h-6" />
