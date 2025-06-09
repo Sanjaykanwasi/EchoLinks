@@ -172,15 +172,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="px-4 sm:px-8 md:px-16 lg:px-28 py-8 border-t border-gray-800">
-        <div className="max-w-6xl mx-auto text-center">
-          <p className="text-gray-400">
-            Built with ❤️ using Next.js • Echo Link © 2024
-          </p>
-        </div>
-      </footer>
     </div>
   );
 }
