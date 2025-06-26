@@ -1,15 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, Search, Bell, User } from "lucide-react";
-import { Metadata } from "next";
-import {
-  SignInButton,
-  SignUpButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from "@clerk/nextjs";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -75,7 +67,7 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* Right Side Icons */}
+            {/* Right Side Icons
             <div className="hidden md:flex items-center space-x-4">
               <Link href="/shorten">
                 <SignedOut>
@@ -96,7 +88,7 @@ export default function Navbar() {
                   </div>
                 </SignedIn>
               </Link>
-            </div>
+            </div> */}
 
             {/* Mobile menu button */}
             <div className="md:hidden">
