@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import toast from "react-hot-toast";
 
 const Shorten = () => {
   const [url, seturl] = useState("");
@@ -30,7 +31,8 @@ const Shorten = () => {
         seturl("");
         setshorturl("");
         console.log(result);
-        alert(result.message);
+        // alert(result.message);
+        toast.success("Successfully Added!");
       })
       .catch((error) => console.error(error));
   };
