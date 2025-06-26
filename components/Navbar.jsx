@@ -2,6 +2,14 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, Search, Bell, User } from "lucide-react";
+import { Metadata } from "next";
+import {
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -70,9 +78,23 @@ export default function Navbar() {
             {/* Right Side Icons */}
             <div className="hidden md:flex items-center space-x-4">
               <Link href="/shorten">
-                <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-200 transform hover:-translate-y-0.5 cursor-pointer">
-                  Try Now
-                </button>
+                <SignedOut>
+                  <SignInButton>
+                    <button className="bg-gradient-to-r from-purple-600 to-blue-600 mx-4 text-white px-6 py-2 rounded-lg font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-200 transform hover:-translate-y-0.5 cursor-pointer">
+                      Sign In
+                    </button>
+                  </SignInButton>
+                  <SignUpButton>
+                    <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-200 transform hover:-translate-y-0.5 cursor-pointer">
+                      Sign Up
+                    </button>
+                  </SignUpButton>
+                </SignedOut>
+                <SignedIn>
+                  <div className="flex items-center space-x-4 h-36 ">
+                    <UserButton />
+                  </div>
+                </SignedIn>
               </Link>
             </div>
 
